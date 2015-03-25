@@ -75,7 +75,7 @@ public class addDefectToSuite {
 		        }
 		        else {
 		        	String[] updateErrors;
-	            	updateErrors = createResponse.getErrors();
+	            	updateErrors = updateResponse.getErrors();
 	        		System.out.println("Error");
 	            	for (int i=0; i<updateErrors.length;i++) {
 	            		System.out.println(updateErrors[i]);
@@ -84,6 +84,11 @@ public class addDefectToSuite {
 		        
             } else {
             	System.out.println("error");
+            	String[] createErrors;
+            	createErrors = createResponse.getErrors();
+            	for (int i=0; i<createErrors.length;i++) {
+            		System.out.println(createErrors[i]);
+            	}
             }
 	
         } finally {
